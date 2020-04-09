@@ -1,0 +1,183 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin:0 auto; /* tirar o margin que o navegador estabelece por padrão */
+}
+
+ul{
+    padding: 0px!important;
+}
+
+.Principal{ /* Dados estabelecidos a partir da visualização pelo Gimp */
+    width: 100%;
+    background-color: #252323;
+    height: 60px;
+}
+
+main, .content{
+    margin: 0 auto; /* dispensável nesse caso -- deixa o conteúdo centrado*/
+    /*float: left;*/
+    width: 980px; /**/
+    position: relative;
+}
+
+/*caso a imagem do logo estivesse deslocada o padding poderia ser ajustado -- padding = eixo y*/
+.logo{
+    float: left;
+    padding: 16px;
+    width: 70%;
+}
+
+.redes_sociais ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+}
+
+.redes_sociais{
+    width: 20%;
+    margin-left: 25px; /*25px para esquerda*/
+    float: left;
+}
+
+.Principal-2{
+    background-color: #ffffff;
+    width: 980px;
+    margin: 0 auto;
+    padding:16px;
+}
+
+.menu-url{
+    border-bottom: 3px solid #efefef; /* Borda inferior */
+}
+
+.col-100{
+    widows: 100%;
+    position: relative; 
+    height: 60px;  
+}
+  
+.menu ul li {
+    display: inline-block;  /*float: left; aqui faz todos os ícones ficarem juntos*/ 
+    color:#8b8b8b;
+    margin-left: 15px; /*espaçamento entre as palavras*/
+    height: 27px;
+}
+
+.menu ul li:hover{ 
+    border-bottom: 3px solid #00bac6;
+}
+
+.menu ul li a:hover{ /*cor para quando passar o mouse*/
+    color: #00bac6;
+}
+
+.menu ul li a{ 
+    text-decoration: none;
+    color:#8b8b8b;
+    font-size: 18px;
+    text-transform: uppercase ;
+}
+
+.menu{
+    width:70%;
+    margin:-10px; /*usei para centralizar o menu de urls*/
+    float:left;
+}
+
+.busca{
+    width:30%;
+    float: right;
+    margin:-7px;  
+}
+ .busca input{
+    background-image: url('../img/template.png');
+    background-repeat: no-repeat; /*imagem não repete*/
+    background-position: 97%;
+    text-align: center;
+    margin-top: 5px;
+    height: 20px;
+    width: 190px;
+    padding: 7px;
+    border: 1px solid #d6d6d6;
+ }
+ 
+ /* o top ajusta a posição do botão na tela enquanto o position torna a posição da imagem independente da camada/classe*/
+ button.slick-prev{
+    font-size: 0px;
+    border: none;
+    width: 39px;
+    height: 64px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url('../img/seta-esq.png'); /*formato para inserir imagens no css ( "  url('...')  " )*/
+    top:345%; 
+    left: 14%;
+ }
+
+
+ button.slick-next{
+
+    font-size: 0px;
+    border: none;
+    width: 37px;
+    height: 61px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url('../img/seta-dir.png');
+    top:345%;
+    right: 14%;
+ }
+
+ .slider-list{
+    width:100%!important;
+}
+ .slick-initialized{
+     overflow: hidden;
+ }
+
+ .slick-dots li button{
+    font-size: 0px;
+    border:5px solid #ffffff;
+    width:21px;
+    height:21px;
+    background: transparent;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+ .slick-dots{
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left:46%;
+    top: 450px;
+ }
+
+ .slick-dots li{
+    padding-left: 10px;
+    display: inline-block;
+ }
+
+ li.slick-active button{ /*pegar o li da classe active e modificar o botão*/
+    background: #00bac6;
+}
+
+.texto-destaque p {
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+.texto-destaque {
+    text-align: center;
+}
+
+.texto-destaque h1{
+    color: #818181;
+}
+
+.texto-destaque strong{
+    color: #646464; 
+}
