@@ -1,6 +1,7 @@
 body{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     margin:0 auto; /* tirar o margin que o navegador estabelece por padrão */
 }
 
@@ -99,7 +100,7 @@ main, .content{
  .col-100{
     width: 100%;
     position: relative; 
-    height: 60px;  
+    height: 60px;  /*não eh o adequado, mas sem o normalizador do css para navegador estava dando erro no firefox - melhor setar apenas float:left; no lugar do height*/
 }
  
  /* o top ajusta a posição do botão na tela enquanto o position torna a posição da imagem independente da camada/classe*/
@@ -250,13 +251,7 @@ dando efeito de continuidade com o background cinza*/
     background: #ffffff;
 }
 
-/*.col-4{ -- this way is not the better
-    height: 60px;
-    padding-top: 15px;
-    margin-left: 300px;
-}*/
-
-.col-4 { /*div para cada imagem*/
+.col-4 { /*div para cada imagem (generalizável,  como espaço, mas restrita para espaço que possua 4 divisórias )*/
     float: left;
     width: 25%; /*100%(espaço) dividido por 4 logos*/
     text-align: center;
@@ -280,7 +275,61 @@ dando efeito de continuidade com o background cinza*/
     margin-top: 35px;
 }
 
+.footer{ /*precisa de heigth reajustado por conta da definição do col-100 ou content*/
+    background-image:url('../img/footer.png') ;
+    height: 260px;
+    color: #ffffff;
+}
 
+.footer p {
+    width: 90%; /* Não cola no paragrado do lado */
+    text-align: left;
+}
 
+.footer h3{
+    text-align: left;
+}
 
+.clock {
+    color: #898989;
+}
 
+.clock:before{ /*Não eh possível colocar todas as classes juntas pq as imagens ficam cortadas com a mesma altura e largura que são definidas na clock:before*/
+    content:'';
+    width:15px;
+    height:15px;
+    display: inline-block;
+    background-image: url('../img/clock.png');
+    float: left; /*somente se aplica a boxes que não possuem o atributo position:absolute;*/
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+
+.local:before,.emailico:before,.telefoneico:before{
+    content:'';
+    width:17px;
+    height:24px;
+    display: inline-block;
+    float: left; /*somente se aplica a boxes que não possuem o atributo position:absolute;*/
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+
+.local:before{
+    background-image: url('../img/local.png');
+}
+
+.emailico:before{
+    background-image: url('../img/emailico.png');
+}
+
+.telefoneico:before{
+    background-image: url('../img/telefoneico.png');
+}
+
+.footer-2 {
+    background-image: url('../img/footer2.png');
+    height: 90px;
+    color: #c1c1c1;
+    margin-top: -16px;
+}
